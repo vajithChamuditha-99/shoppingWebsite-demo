@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<!-- add a title -->
+	<title>My Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" >
+
+	<script src="..\src\js/myScript.js">
+	</script>
+
+	<script>
+		alert("news page loaded");
+	</script>
+	
+	<p class="date" id="p1"></p>
+	<script>
+
+		var today = new Date();
+
+		var date =today.getDate() +'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+		
+		document.getElementById("p1").innerHTML = date;
+	</script>
+ </head>
+
+ <body>
+ <!-- add a logo-->
+	<img class="logo"  src="..\src\images/shoping cart logo.png" height="200" width="200" alt="Shopping Cart Image">
+<center>
+
+ <!-- add a header-->
+	<h1>Shopping Cart</h2> 
+<!-- add a sub-header-->
+	<h3>The online shopping store</h3>
+
+ <!-- add a horizontal line-->
+<hr id="test"/>
+
+ <!-- add a horizontal menu-->
+<ul class="menu">
+	<li class="menu"><a href=" ../src/index.html">Home</a></li>
+	<li class="menu"><a href="../src/news.html">News</a></li>
+	<li class="menu"><a href="../src/register.html">Contact</a></li>
+	<li class="menu"><a href="../src/aboutus.html">About us</a></li>
+</ul>
+<br/><br/>
+
+<div class="phonelayout" >
+	<button class="button" type="button" id="button1" onclick= "loadData(button1)">Iphone XS</button>
+	<button class="button" type="button" id="button2" onclick= "loadData(button2)">Iphone XS Max</button>
+	<button class="button" type="button" id="button3" onclick= "loadData(button3)">Iphone 8s plus</button>
+	<button class="button" type="button" id="button4" onclick= "loadData(button4)">Iphone SE</button>
+	<button class="button" type="button" id="button5" onclick= "priceForLoop()">Average Price</button>
+	<button class="button" type="button" id="button6" onclick= "priceHigher()">Price Higher than 1000</button>
+	<button class="button" type="button" id="button7" onclick= "priceLower()">Price lower than 1000</button>
+</div>
+<br><br>
+
+<img id="img1" src="images/phone.jpg" >
+<p class="para1" id="para">The iPhone is a line of touchscreen-based smartphones designed and marketed by Apple Inc. that use Apple's iOS mobile operating system. The first-generation iPhone was announced by Apple co-founder Steve Jobs on January 9, 2007. Since then Apple has annually released new iPhone models and iOS updates. As of November 1, 2018, more than 2.2 billion iPhones had been sold.<br>The iPhone's user interface is built around a multi-touch screen with a virtual keyboard. The iPhone connects to cellular networks or Wi-Fi, and can make calls, browse the web, take pictures, play music and send and receive emails and text messages. Since the iPhone's launch further features have been added, including larger screen sizes, shooting video, waterproofing and the ability to install third-party mobile apps through an app store, as well as accessibility support. Up to 2017, iPhones used a layout with a single button on the front panel that returns the user to the home screen. Since 2017, more expensive iPhone models have switched to a nearly bezel-less front screen design with app switching activated by gesture recognition.<br>The first-generation iPhone was described as "revolutionary" and a "game-changer" for the mobile phone industry and subsequent models have also garnered praise. The iPhone has been credited with popularizing the smartphone and slate form factor, and with creating a large market for smartphone apps, or "app economy". As of January 2017, Apple's App Store contained more than 2.2 million applications for the iPhone.<br>The iPhone is one of the two largest smartphone platforms in the world alongside Google's Android, forming a large part of the luxury market. The iPhone has generated large profits for Apple, making it one of the world's most valuable publicly traded companies. 
+ 
+<!-- add a horizontal line-->
+<hr>
+ <!-- add a footer-->
+<footer>
+<h3 style="font-weight: bold; font-style: italic;">Footer</h3>
+<br>
+
+</center>
+</footer>
+</body>
+</html>

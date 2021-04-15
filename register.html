@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<!-- add a title (a) -->
+	<title>My Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" >
+	<link rel="stylesheet" type="text/css" href="styles/formStyles.css" >
+	
+	<script src="..\src\js/myScript.js">
+	</script>
+
+	<p class="date" id="p1"></p>
+	<script>
+
+		var today = new Date();
+
+		var date =today.getDate() +'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+		
+		document.getElementById("p1").innerHTML = date;
+	</script>
+ </head>
+ <body>
+ <!-- add a logo (b) -->
+	<img class="logo"  src="..\src\images/shoping cart logo.png" height="200" width="200" alt="Shopping Cart Image">
+
+<center>
+ <!-- add a header (c)-->
+	<h1>Shopping Cart</h2> 
+<!-- add a sub-header (c) -->
+	<h3>The online shopping store</h3>
+ <!-- add a horizontal line (d)-->
+<hr id="test"/>
+</center>
+ <!-- add a horizontal menu (e) -->
+<ul class="menu">
+	<li class="menu"><a href="../src/index.html">Home</a></li>
+	<li class="menu"><a href="../src/news.html">News</a></li>
+	<li class="menu"><a href="../src/register.html">Contact</a></li>
+	<li class="menu"><a href="../src/aboutus.html">About us</a></li>
+</ul>
+<br/>
+	
+<center>
+
+<header>
+<h2 class="header">Registration Form</h2>
+
+
+<div class="registration">
+<form action="#" target="_self" method="post" onsubmit="return checkPassword()" align="left" >
+First Name
+<br><br>
+<input type="text" class="text"id="fname" name="fname" placeholder="Enter first name here" required>
+<br><br>
+Last Name
+<br><br>
+<input type="text" class="text" id="lname"name="lname" placeholder="Enter last name here" required>
+<br><br>
+Gender
+<br><br>
+<input type="radio"  id="gender" name="gender" value="male" checked>Male</input>
+<input type="radio" id="gender" name="gender" value="female">Female</input>
+ <br><br>
+Mobile Number
+<br><br>
+<input type="text" class="text" id="mobile" pattern="[0-9]{10}" placeholder="Mobile Number" required>
+<br><br>
+E-mail Address
+<br><br>
+<input type="email" class="text" id="emailAdd" name="emailAdd" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required placeholder="E-mail">
+<br><br>
+Address
+<br><br>
+<textarea id="addr" name="add" cols="50" rows="10"style="width:40%;" required placeholder="Address"></textarea>
+<br><br>
+Choose your DOB
+<br><br>
+<select style="width:20%" class="text">
+	<option value="Choose a date">Choose a date</option>
+	<option value="Choose a date">01</option>
+	<option value="Choose a date">02</option>
+	<option value="Choose a date">03</option>
+	<option value="Choose a date">04</option>
+	<option value="Choose a date">05</option>
+	<option value="Choose a date">06</option>
+	<option value="Choose a date">07</option>
+	<option value="Choose a date">08</option>
+	<option value="Choose a date">09</option>
+	<option value="Choose a date">10</option>
+	<option value="Choose a date">11</option>
+	<option value="Choose a date">12</option>
+	<option value="Choose a date">13</option>
+	<option value="Choose a date">14</option>
+	<option value="Choose a date">15</option>
+	<option value="Choose a date">16</option>
+	<option value="Choose a date">17</option>
+	<option value="Choose a date">18</option>
+	<option value="Choose a date">19</option>
+	<option value="Choose a date">20</option>
+	<option value="Choose a date">21</option>
+	<option value="Choose a date">22</option>
+	<option value="Choose a date">23</option>
+	<option value="Choose a date">24</option>
+	<option value="Choose a date">25</option>
+	<option value="Choose a date">26</option>
+	<option value="Choose a date">27</option>
+	<option value="Choose a date">28</option>
+	<option value="Choose a date">29</option>
+	<option value="Choose a date">30</option>
+	<option value="Choose a date">31</option>
+</select>
+:
+<select style="width:20%" class="text">
+	<option value="Choose a Month">Choose a Month</option>	
+	<option value="Choose a Month">01</option>	
+	<option value="Choose a Month">02</option>
+	<option value="Choose a Month">03</option>
+	<option value="Choose a Month">04</option>
+	<option value="Choose a Month">05</option>
+	<option value="Choose a Month">06</option>
+	<option value="Choose a Month">07</option>
+	<option value="Choose a Month">08</option>
+	<option value="Choose a Month">09</option>
+	<option value="Choose a Month">10</option>
+	<option value="Choose a Month">11</option>
+	<option value="Choose a Month">12</option>
+</select>	
+:
+<select style="width:20%" class="text">
+	<option value="Choose a Year">Choose a Year</option>
+	<option value="Choose a Year">1995</option>
+	<option value="Choose a Year">1996</option>
+	<option value="Choose a Year">1997</option>
+	<option value="Choose a Year">1998</option>
+	<option value="Choose a Year">1999</option>
+	<option value="Choose a Year">2000</option>
+	<option value="Choose a Year">2001</option>
+	<option value="Choose a Year">2002</option>
+	<option value="Choose a Year">2003</option>
+	<option value="Choose a Year">2004</option>
+	<option value="Choose a Year">2005</option>
+</select>
+<br><br>
+Password
+<br><br>
+<input type="password" class="pwd"  id="pwd" name="pwd" style="width:30%;" pattern="[A-Za-z0-9]{5,10}" required placeholder="Password">
+<br><br>
+Re-enter Password
+<br><br>
+<input type="password" class="pwd" id="rpwd" name="rpwd" style="width:30%;"required placeholder="Password">
+<br><br><br>
+Accept privacy policy and terms.
+<input type="checkbox" id="policy" name="policy" value="checked" required onclick="enableButton()"></input>
+<br><br>
+<input type="submit" class="btn1" id="btn1" name="btn1" value="Submit" disabled>
+<br><br>
+
+</form>
+</div>
+<center>
+<!-- add a horizontal line-->
+<hr>
+ <!-- add a footer-->
+<h3 style="font-weight: bold; font-style: italic;">Footer</h3>
+<br>
+</center>
+</footer>
+</body>
+</html>
