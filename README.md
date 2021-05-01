@@ -1,3 +1,3 @@
 # shoppingWebsite-demo
 
-Simple shoping website
+Simple shoping website with,
